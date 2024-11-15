@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <form action="/<%= category %>/edit/<%= item.id %>" method="post">
+      <label>
+        Name
+        <input type="text" name="itemName" value="<%= item.name %>" />
+      </label>
+      <label>
+        Details
+        <input type="text" name="itemDetails" value="<%= item.details %>" />
+      </label>
+      <label>
+        Price
+        <input type="number" name="itemPrice" value="<%= item.price %>" />
+      </label>
+      <button type="submit">Edit</button>
+    </form>
+    <a href="/delete/<%= category %>/<%= item.id %>">
+      <button>Delete</button>
+    </a>
+  </body>
+</html>

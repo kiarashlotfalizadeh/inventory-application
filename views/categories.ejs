@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Categories</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a href="/new-category">
+      <button>New Category</button>
+    </a>
+    <% categories.map((category) => { %>
+    <a href="/<%= category %>">
+      <button><%= category %></button>
+    </a>
+    <a href="/edit/<%= category %>">
+      <button>Edit</button>
+    </a>
+    <a href="/delete/<%= category %>">
+      <button>Delete</button>
+    </a>
+    <% }) %>
+  </body>
+</html>
